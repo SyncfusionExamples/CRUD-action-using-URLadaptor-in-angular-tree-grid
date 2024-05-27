@@ -1,0 +1,8 @@
+<ejs-treegrid #treegrid [dataSource]='data' hasChildMapping='isParent' idMapping='TaskId' parentIdMapping='ParentId' [allowPaging]="true" [pageSettings]="pagesettings" [editSettings]="editSettings" [toolbar]="toolbar" height="250">
+  <e-columns>
+    <e-column field='TaskId' headerText='Task ID' isPrimaryKey=true width='150'></e-column>
+    <e-column field='TaskName' headerText='Task Name' width='150'></e-column>
+    <e-column field='Duration' headerText='Duration' width='150' textAlign='Right'></e-column>
+  </e-columns>
+</ejs-treegrid>
+
