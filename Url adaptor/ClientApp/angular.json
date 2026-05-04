@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "UrlAdaptor": {
+    "ClientApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -72,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "UrlAdaptor:build:production"
+              "buildTarget": "ClientApp:build:production"
             },
             "development": {
-              "browserTarget": "UrlAdaptor:build:development",
+              "buildTarget": "ClientApp:build:development",
               "proxyConfig": "proxy.conf.js"
             }
           },
@@ -84,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "UrlAdaptor:build"
+            "buildTarget": "ClientApp:build"
           }
         },
         "test": {
@@ -132,7 +131,7 @@
       }
     }
   },
-  "defaultProject": "UrlAdaptor",
+  "defaultProject": "ClientApp",
   "cli": {
     "analytics": "71fc2fe0-4676-40bd-a865-1f8b7970ddb4"
   }

@@ -3,9 +3,19 @@ import { TreeGridComponent, ToolbarItems, EditSettingsModel } from '@syncfusion/
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 import { Ajax } from '@syncfusion/ej2-base';
 
+import { FormsModule } from '@angular/forms';
+
+import { FilterService, GridAllModule, SortService,  GroupService } from '@syncfusion/ej2-angular-grids';
+
+import { RowDDService, ToolbarService, TreeGridAllModule, EditService, PageService } from '@syncfusion/ej2-angular-treegrid';
+
+
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+   standalone:true,
+    providers: [EditService, SortService, ToolbarService, RowDDService, FilterService, PageService],
+    imports: [ FormsModule, GridAllModule, TreeGridAllModule],
 })
 export class AppComponent {
   @ViewChild('treegrid')
