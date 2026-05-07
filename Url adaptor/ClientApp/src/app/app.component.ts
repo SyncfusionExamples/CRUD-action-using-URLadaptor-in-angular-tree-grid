@@ -13,9 +13,9 @@ import { RowDDService, ToolbarService, TreeGridAllModule, EditService, PageServi
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-   standalone:true,
-    providers: [EditService, SortService, ToolbarService, RowDDService, FilterService, PageService],
-    imports: [ FormsModule, GridAllModule, TreeGridAllModule],
+  standalone:true,
+  providers: [EditService, SortService, ToolbarService, RowDDService, FilterService, PageService],
+  imports: [ FormsModule, GridAllModule, TreeGridAllModule],
 })
 export class AppComponent {
   @ViewChild('treegrid')
